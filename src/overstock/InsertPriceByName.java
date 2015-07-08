@@ -34,7 +34,7 @@ public class InsertPriceByName {
 		Workbook excel=Workbook.getWorkbook(new File(".\\input\\Overstock_Name_Price.xls"));
 		Sheet sh=excel.getSheet("Sheet1");
 		
-		FileOutputStream f = new FileOutputStream(".\\output\\output.xls",true);
+		FileOutputStream f = new FileOutputStream(".\\output\\outputNamePrice.xls",true);
 		WritableWorkbook book = Workbook.createWorkbook(f); 
 	    WritableSheet sheet = book.createSheet("output", 0);
 		
