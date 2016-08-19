@@ -17,16 +17,15 @@ public class GmailLogin {
 		//WebDriver driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.gmail.com/");
-		driver.findElement(By.id("Email")).sendKeys("abc");
+		driver.findElement(By.id("Email")).sendKeys("abce32564");
 		driver.findElement(By.id("next")).click();
-		driver.findElement(By.id("Passwd")).sendKeys("abc");
+		Thread.sleep(1000);//In milliseconds
+		driver.findElement(By.id("Passwd")).sendKeys("Abce32564$");
 		driver.findElement(By.id("signIn")).click();
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		new WebDriverWait(driver, 10).
-		until(ExpectedConditions.elementToBeClickable(By.className("gb_d"))).click();
-		//Thread.sleep(10000);//In milliseconds 
-		
-		//driver.findElement(By.className("gb_d")).click();
+		until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='gb']/div[1]/div[1]/div[2]/div[4]/div[1]/a/span"))).click();
+		Thread.sleep(1000);//In milliseconds
 		driver.findElement(By.id("gb_71")).click();
 		//driver.quit();//will close complete window with all tabs
 		driver.close();//will close only the specific tab
